@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a3cfb4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>PREDICTION :</h1>
+        
+        {% if data == 0 %}
+            <h1>คุณไม่มีความเสี่ยงต่อการเป็นโรค Stroke</h1>  
+            <img src='static/Norisk.jpg' alt="Healthy">  
+            <h2>คำแนะนำสำหรับการรักษาสุขภาพ:</h2>
+            <ul style="text-align: left; font-size: 0.9rem;">
+                <li>รักษาน้ำหนักตัวให้อยู่ในเกณฑ์ปกติ</li>
+                <li>ออกกำลังกายอย่างสม่ำเสมอ</li>
+                <li>นอนหลับให้เพียงพอเพื่อฟื้นฟูร่างกาย</li>
+            </ul>
+        {% else %}
+            <h1>คุณมีความเสี่ยงต่อการเป็นโรค Stroke</h1>
+            <img src='static/risk.jpg' alt="At Risk">
+            <h2>คำแนะนำ:</h2>
+            <ul style="text-align: left; font-size: 0.9rem;"> 
+                <li>ควรออกกำลังกายอย่างน้อย 30 นาทีต่อวัน</li>
+                <li>รับประทานอาหารที่มีประโยชน์ เช่น ผัก, ผลไม้, และธัญพืช</li>
+                <li>หลีกเลี่ยงการสูบบุหรี่และลดการบริโภคแอลกอฮอล์</li>
+                <li>ตรวจสุขภาพเป็นประจำเพื่อติดตามความดันโลหิตและระดับน้ำตาลในเลือด</li>
+                <li>ปรึกษาแพทย์หากมีอาการที่น่าสงสัย</li>
+            </ul>
+            
+        {% endif %}
+            
+        
+
+        <br><br>
+        <a href='/'>Go Back to Home Page</a>
+    </div>
+
+</body>
+</html>
