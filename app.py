@@ -37,7 +37,6 @@ def home():
         # คำนวณ BMI
          bmi = weight / (height ** 2)
 
-        # ... (ต่อไปยังการคำนวณอื่น ๆ)
 
     except ValueError:
         return render_template('home.html', error="กรุณาใส่ค่าเป็นตัวเลขที่ถูกต้อง")
