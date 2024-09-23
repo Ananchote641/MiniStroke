@@ -83,6 +83,13 @@
 
         <label for="avg_glucose_level">ระดับน้ำตาลเฉลี่ยในเลือด:</label>
         <input type="number" id="avg_glucose_level" name="avg_glucose_level" placeholder="กรอกระดับน้ำตาล" required>
+        
+        <label for="gender">เพศ:</label>
+        <select id="gender" name="gender" required>
+            <option value="1">ชาย</option>
+            <option value="0">หญิง</option>
+        </select>
+
 
         <label for="hypertension">ความดันโลหิตสูง:</label>
         <select id="hypertension" name="hypertension" required>
@@ -102,12 +109,19 @@
             <option value="1">เคย</option>
         </select>
 
+        <label for="Residence">ที่อยู่อาศัย:</label>
+        <select id="Residence" name="Residence" required>
+            <option value="0">ชนบท</option>
+            <option value="1">เมือง</option>
+        </select>
+
         <label for="work_type">ประเภทงาน:</label>
         <select id="work_type" name="work_type" required>
             <option value="0">ราชการ</option>
             <option value="1">งานเอกชน</option>
             <option value="2">ทำงานอิสระ</option>
             <option value="3">ยังไม่ประกอบอาชีพ</option>
+            <option value="4">เด็ก</option>
         </select>
 
         <label for="smoking_status">สถานะการสูบบุหรี่:</label>
